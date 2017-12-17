@@ -1,0 +1,42 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- id Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.name}} </mat-cell>
+    </ng-container>
+
+    <!-- description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef> description </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.description}} </mat-cell>
+    </ng-container>
+
+    <!-- price Column -->
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef> price </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.price}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="visibility">
+      <mat-header-cell *matHeaderCellDef> visibility </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.visibility}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="imgUrl">
+      <mat-header-cell *matHeaderCellDef> imgUrl </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.imgUrl}} </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>
+<button mat-raised-button color="primary" (click)="event(null)">Add New Meal</button>

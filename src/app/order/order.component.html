@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <span *ngIf="router.url === '/order/meals'">Meals</span>
+      <span *ngIf="router.url === '/order/favorites'">Favorite Meals</span>
+      <span *ngIf="router.url === '/order/history'">Order History</span>
+
+
+      <span class="example-spacer"></span>
+      <button mat-button routerLink="/order/meals">Meals</button>
+      <button mat-button routerLink="/order/history">History</button>
+      <button mat-button routerLink="/order/favorites">Favorites</button>
+      <button mat-button (click)="openDialog()">Checkout</button>
+
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

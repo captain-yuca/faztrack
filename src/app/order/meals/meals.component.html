@@ -1,0 +1,58 @@
+<div class="order-container">
+  <div id="recommendations">
+    <h3 class="mat-title">Based On Your Orders</h3>
+    <div class="recommendations-container">
+      <mat-card *ngFor="let x of [1,2,3]"class="example-card">
+        <img mat-card-image src="http://placehold.it/300x300" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h3>Food</h3>
+          <h5>Recommended because you choose: Meal 4</h5>
+          <span>$5.99</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary">Add</button>
+          <button mat-button color="primary">Favorite</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <div id="meals">
+    <h3 class="mat-title">All Meals</h3>
+    <div class="meals-container">
+      <mat-card *ngFor="let x of [1,2,3,4,5,6]"class="example-card">
+        <img mat-card-image src="http://placehold.it/300x300" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h3>Food</h3>
+          <span>$5.99</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary" >Add</button>
+          <button mat-button color="primary">Favorite</button>
+        </mat-card-actions>
+      </mat-card>
+      <mat-card class="example-card">
+        <img mat-card-image src="http://placehold.it/300x300" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h3>Food</h3>
+          <span><b>NOT AVAILABLE</b></span>
+          <br />
+          <span>$5.99</span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary" >Add</button>
+          <button mat-button color="primary">Favorite</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

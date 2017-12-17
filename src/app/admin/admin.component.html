@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <span *ngIf="router.url === '/admin'">Admin Meal Catalog</span>
+      <span *ngIf="router.url === '/admin/orders'">Admin Current Orders</span>
+      <span *ngIf="router.url === '/admin/history'">Admin Order History</span>
+
+
+      <span class="example-spacer"></span>
+      <button mat-button routerLink="/admin/">Meal Catalog</button>
+      <button mat-button routerLink="/admin/orders">Current Orders</button>
+      <button mat-button routerLink="/admin/history">Order History</button>
+
+
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>

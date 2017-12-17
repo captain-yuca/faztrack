@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Order Details</h1>
+<div *ngIf="!isDelete" mat-dialog-content>
+  <h3 class="mat-h3">Name</h3>
+  <mat-form-field class="example-full-width">
+   <input matInput placeholder="Name" value="{{data.name}}">
+ </mat-form-field>
+ <h3 class="mat-h3">Description</h3>
+ <mat-form-field class="example-full-width">
+   <textarea matInput placeholder="Description" value={{data.description}}></textarea>
+ </mat-form-field>
+ <h3 class="mat-h3">Price</h3>
+ <mat-form-field class="example-full-width">
+   <input matInput placeholder="Price" value="{{data.price}}" />
+ </mat-form-field>
+ <h3 class="mat-h3">ImgUrl</h3>
+ <mat-form-field class="example-full-width">
+   <input matInput placeholder="ImgUrl" value="{{data.imgUrl}}" />
+ </mat-form-field>
+ <h3 class="mat-h3">Availability</h3>
+ <mat-form-field class="example-full-width">
+   <input matInput placeholder="Availability" value="{{data.availability}}" />
+ </mat-form-field>
+ <h3 class="mat-h3">Visibility</h3>
+ <mat-form-field class="example-full-width">
+   <input matInput placeholder="Visibility" value="{{data.visibility}}" />
+ </mat-form-field>
+</div>
+
+ <div *ngIf="isDelete" mat-dialog-content>
+   <h3 class="mat-h2">Are you sure you want to delete?</h3>
+ </div>
+
+
+<div mat-dialog-actions>
+  <button *ngIf="!data.isAdd && !isDelete" mat-button [mat-dialog-close]="" tabindex="2">Update</button>
+  <button *ngIf="!data.isAdd && !isDelete" mat-button (click)="delete()" tabindex="2">Delete</button>
+  <button *ngIf="!data.isAdd && isDelete" mat-button (click)="onNoClick()" tabindex="2">Yes</button>
+
+  <button *ngIf="data.isAdd" mat-button [mat-dialog-close]="" tabindex="2">Add</button>
+  <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+</div>

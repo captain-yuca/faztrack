@@ -1,0 +1,12 @@
+.weight-container{
+  /*display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;*/
+  padding: 2em;
+  text-align: center;
+
+}
+
+.graph-container{
+  text-align: center;
+}

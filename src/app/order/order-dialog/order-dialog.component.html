@@ -1,0 +1,103 @@
+<h1 mat-dialog-title>Order Details</h1>
+<div mat-dialog-content>
+  <h3 class="mat-h3">Day of Pickup/Delivery</h3>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <h3 class="mat-h3">Time of Pickup/Delivery</h3>
+  <mat-form-field class="example-full-width">
+    <!-- <span matPrefix>+1 &nbsp;</span> -->
+    <input type="time" matInput placeholder="6:00pm">
+  </mat-form-field>
+  <h3 class="mat-h3">Choose Method</h3>
+  <mat-radio-group class="radio" [(ngModel)]="myChoice">
+    <mat-radio-button class="example-radio-button" *ngFor="let choice of choices" [value]="choice">{{choice}}</mat-radio-button>
+  </mat-radio-group>
+  <br />
+  <br />
+  <div *ngIf="myChoice=='Delivery'">
+  <h3 class="mat-h3">Delivery Information</h3>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="First name">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="Last Name">
+    </mat-form-field></td>
+  </tr></table>
+
+  <p>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address 2"></textarea>
+    </mat-form-field>
+  </p>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="City">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="State">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field></td>
+  </tr></table>
+</div>
+
+  <h3 class="mat-h3">Payment Information</h3>
+  <button mat-raised-button>Use Card Ending With 7654</button>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td> <mat-form-field class="example-full-width">
+        <input matInput #postalCode maxlength="16" placeholder="Credit Card Number" value="8888888888888888">
+      </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+        <input matInput #postalCode maxlength="4" placeholder="Security #" value="0000">
+      </mat-form-field></td>
+
+
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="First name">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="Last Name">
+    </mat-form-field></td>
+  </tr></table>
+
+  <p>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address 2"></textarea>
+    </mat-form-field>
+  </p>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="City">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput placeholder="State">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field></td>
+  </tr></table>
+  <button mat-raised-button>Save Payment Information</button>
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="" (click)="navigate()"tabindex="2">Order</button>
+  <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+</div>

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <span >Weight Tracker</span>
+
+      <span class="example-spacer"></span>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="weight-container">
+  <div class="graph-container">
+    <img src="assets/weight.png"/>
+  </div>
+
+  <mat-form-field>
+    <input matInput placeholder="Weight">
+  </mat-form-field>
+
+
+  <mat-radio-group class="example-radio-group">
+    <mat-radio-button  [value]="1">
+      lbs
+    </mat-radio-button>
+    <mat-radio-button  [value]="2">
+      kg
+    </mat-radio-button>
+  </mat-radio-group>
+  <button mat-raised-button >Submit</button>
+
+</div>

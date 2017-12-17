@@ -1,0 +1,24 @@
+
+.order-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.order-container > div > div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.order-container > div > h3{
+  margin: 1em 0 .3em 1.4em;
+}
+
+mat-card{
+  width: 15%;
+
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

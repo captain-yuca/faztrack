@@ -1,0 +1,37 @@
+.history-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+.history-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 1em 0;
+}
+
+.history-item > img{
+    /* border-radius: 8px; */
+}
+.history-item > .information{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: ridge;
+    border-radius: 8px;
+    border-left:
+
+}
+
+.history-item > .information > .info-column > h1, h2, h3, h4, p{
+    margin:0
+}
+.history-item > .information > .info-column > button{
+    margin:1em 0 0 0;
+}
+
+.info-column{
+    margin: 0 4em 0 0;
+}
