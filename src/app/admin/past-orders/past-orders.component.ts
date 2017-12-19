@@ -8,7 +8,7 @@ import {TransactionDialogComponent} from './transaction-dialog/transaction-dialo
   styleUrls: ['./past-orders.component.css']
 })
 export class PastOrdersComponent implements OnInit {
-  displayedColumns = ['customer', 'delivery', 'meals', 'price', 'date'];
+  displayedColumns = ['customer', 'delivery', 'meals', 'price', 'date', 'status'];
   dataSource = new MatTableDataSource<Order>(ORDER_DATA);
   total = "$31.97";
 
@@ -44,8 +44,8 @@ export interface Order {
   status:string;
 }
 const ORDER_DATA:Order[] = [
-  {pos:1,customer:"Harry Potter", delivery:"Martinez", meals:"Chuleta, Milkshake", price:10.99, date:"12/12/2017", orderTime:"12:00pm", pickupTime:"2:00pm", pickupDate:"12/12/2017", status:"Ready"},
-  {pos:2, customer:"Manuel Sanchez", delivery:"Martinez", meals:"Chuleta, Milkshake", price:10.99, date:"12/12/2017", orderTime:"12:00pm", pickupTime:"2:00pm", pickupDate:"12/12/2017", status:"In Progress"},
-  {pos:3, customer:"Maria Huracan", delivery:"Martinez", meals:"Chuleta, Milkshake", price:10.99, date:"12/12/2017", orderTime:"12:00pm", pickupTime:"2:00pm", pickupDate:"12/12/2017", status:"Canceled By Customer"}
+  {pos:1,customer:"Harry Potter", delivery:"Martinez", meals:"Chuleta, Milkshake", price:10.99, date:"12/12/2017", orderTime:"12:00pm", pickupTime:"2:00pm", pickupDate:"12/12/2017", status:"Completed"},
+  {pos:2, customer:"Manuel Sanchez", delivery:"Martinez", meals:"Chuleta, Milkshake", price:10.99, date:"12/12/2017", orderTime:"12:00pm", pickupTime:"2:00pm", pickupDate:"12/12/2017", status:"Pending"},
+  {pos:3, customer:"Maria Huracan", delivery:"Martinez", meals:"Chuleta, Milkshake", price:10.99, date:"12/12/2017", orderTime:"12:00pm", pickupTime:"2:00pm", pickupDate:"12/12/2017", status:"Completed"}
 
 ]
