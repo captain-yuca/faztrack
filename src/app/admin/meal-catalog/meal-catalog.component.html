@@ -32,6 +32,10 @@
       <mat-header-cell *matHeaderCellDef> imgUrl </mat-header-cell>
       <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.imgUrl}} </mat-cell>
     </ng-container>
+    <ng-container matColumnDef="mealTags">
+      <mat-header-cell *matHeaderCellDef> Meal Tags </mat-header-cell>
+      <mat-cell *matCellDef="let element" (click)="event(element)"> {{element.mealTags}} </mat-cell>
+    </ng-container>
 
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
